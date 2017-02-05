@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PACIENTI</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+
+
+
+<body>
+
+    <div class="container">
+        <h1>Pacienti</h1>
+        <br/>
+    </div>
+
+    <div class="container">
+        
+        <button type="button" id="btn_diag" class="btn btn-primary" disabled>Diagnóza</button>
+        <table id="table_patients" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Příjmení</th>
+                    <th>Jméno</th>
+                    <th>Pohlaví</th>
+                    <th>Datum narození</th>
+                    <th>Rodné číslo</th>
+                    <th>Kód pojišťovny</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="ID8855041452">
+                    <td>Anrejsová</td>
+                    <td>Marie</td>
+                    <td>žena</td>
+                    <td>1988 / 05 / 04</td>
+                    <td>885504/1452</td>
+                    <td>111</td>
+
+                </tr>
+                <tr id="ID6510250045">
+                    <td>Dvořák</td>
+                    <td>Jan</td>
+                    <td>muž</td>
+                    <td>1965 / 10 / 25</td>
+                    <td>651025/0045</td>
+                    <td>201</td>
+
+                </tr>
+                <tr id="ID7108210451">
+                    <td>Enger</td>
+                    <td>Jiří</td>
+                    <td>muž</td>
+                    <td>1971 / 08 / 21</td>
+                    <td>710821/0451</td>
+                    <td>111</td>
+                </tr>
+                <tr id="ID9258215810">
+                    <td>Fialová</td>
+                    <td>Jana</td>
+                    <td>žena</td>
+                    <td>1992 / 08 / 21</td>
+                    <td>925821/5810</td>
+                    <td>111</td>
+                </tr>
+                <tr id="ID8002019413">
+                    <td>Holý</td>
+                    <td>Radek</td>
+                    <td>muž</td>
+                    <td>1980 / 02 / 01</td>
+                    <td>800201/9413</td>
+                    <td>111</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    
+<!--Tady je 6x modalni okno, pro kazdeho pacienta zvlast-->
+    <div id="modal_diag8855041452" class="modal fade">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Diagnóza - Anrejsová, Marie</h4>
+                </div>
+                <div class="modal-body">
+
+                    <table class="table table-striped table-diag">
+                        <thead>
+                            <tr>
+                                <th>Diagnóza</th>
+                                <th>Přidáno</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hypertenze 123</td>
+                                <td>2015 / 06 / 06</td>
+                                <td>
+                                    <div>
+                                        <button type="button" class="btn btn-primary btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-pencil"></span></button>
+                                        <button type="button" class="btn btn-danger btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-trash-o"></span></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Chřipka 452/4</td>
+                                <td>2015 / 06 / 06 </td>
+                                <td>
+                                    <div>
+                                        <button type="button" class="btn btn-primary btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-pencil"></span></button>
+                                        <button type="button" class="btn btn-danger btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-trash-o"></span></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Nemoc 58-45</td>
+                                <td>2015 / 06 / 06 </td>
+                                <td>
+                                    <div>
+                                        <button type="button" class="btn btn-primary btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-pencil"></span></button>
+                                        <button type="button" class="btn btn-danger btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-trash-o"></span></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                    <button type="button" class="btn btn-table btn-success" style="left:2px;"><span class="fa fa-plus"></span></button>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zavřít bez uložení</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Uložit a zavřít</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal_diag6510250045" class="modal fade">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Diagnóza - Dvořák, Jan</h4>
+                </div>
+                <div class="modal-body">
+
+                    <table class="table table-striped table-diag">
+                        <thead>
+                            <tr>
+                                <th>Diagnóza</th>
+                                <th>Přidáno</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bolavý zub 8/8a</td>
+                                <td>2016 / 01 / 12</td>
+                                <td>
+                                    <div>
+                                        <button type="button" class="btn btn-primary btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-pencil"></span></button>
+                                        <button type="button" class="btn btn-danger btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-trash-o"></span></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+                    <button type="button" class="btn btn-table btn-success" style="left:2px;"><span class="fa fa-plus"></span></button>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zavřít bez uložení</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Uložit a zavřít</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal_diag7108210451" class="modal fade">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Diagnóza - Enger, Jiří</h4>
+                </div>
+                <div class="modal-body">
+
+                    Bez diagnózy
+                    <br/><br/>
+
+
+                    <button type="button" class="btn btn-table btn-success" style="left:2px;"><span class="fa fa-plus"></span></button>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zavřít bez uložení</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Uložit a zavřít</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal_diag9258215810" class="modal fade">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Diagnóza - Fialová, Jana</h4>
+                </div>
+                <div class="modal-body">
+
+                    Bez diagnózy
+                    <br/><br/>
+                    <button type="button" class="btn btn-table btn-success" style="left:2px;"><span class="fa fa-plus"></span></button>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zavřít bez uložení</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Uložit a zavřít</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal_diag8002019413" class="modal fade">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Diagnóza - Holý, Radek</h4>
+                </div>
+                <div class="modal-body">
+
+                    <table class="table table-striped table-diag">
+                        <thead>
+                            <tr>
+                                <th>Diagnóza</th>
+                                <th>Přidáno</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cukrovka typu B od r. 1985</td>
+                                <td>2010 / 12 / 12</td>
+                                <td>
+                                    <div>
+                                        <button type="button" class="btn btn-primary btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-pencil"></span></button>
+                                        <button type="button" class="btn btn-danger btn-table" data-toggle="modal" data-target="#modal-diag"><span class="fa fa-trash-o"></span></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                    
+                        </tbody>
+
+                    </table>
+                    <button type="button" class="btn btn-table btn-success" style="left:2px;"><span class="fa fa-plus"></span></button>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zavřít bez uložení</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Uložit a zavřít</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/myscript.js"></script>
+
+
+
+
+
+</body>
+
+</html>

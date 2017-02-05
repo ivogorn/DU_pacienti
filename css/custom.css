@@ -1,0 +1,28 @@
+body {
+    padding-top: 50px;
+}
+
+
+#table_patients .selected {
+    background-color: lightskyblue;
+}
+
+
+.btn-table {
+    
+    height: 30px;
+    width: 40px;
+    margin-top: -10px;
+    margin-bottom: -7px;
+    position: relative;
+   
+    
+    
+}
+
+.btn-table span {
+    position: relative;
+    top: -2px;
+    
+}
+
